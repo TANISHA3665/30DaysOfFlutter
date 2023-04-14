@@ -1,32 +1,27 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'pages/home_page.dart';
+import 'pages/login_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    
-    // int days = 30;
-    // String name = "Tanisha";
-    // double pi = 3.14;
-    // bool isMale = false;
-    // num temp = 30.5; // this takes both int nad double values
-
-    // var day = "Tuesday";
-    // const pi2 = 3.14;
-    // final number = 12;
-
-    // Const
-    // Value must be known at compile-time, const int year  = 2022;
-    // Can't be changed after initialized.
-
-    // Final
-    // Value must be known at run-time, final birthday = getBirthDateFromDB()
-    // Can't be changed after initialized.
-
-    return HomePage();
+    return MaterialApp(
+        themeMode: ThemeMode.light,
+        theme: ThemeData(primarySwatch: Colors.cyan),
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+        ),
+        routes: {
+          "/": (context) => const LoginPage(),
+          "/home": (context) => const HomePage(),
+          "/login": (context) => const LoginPage(),
+        }
+      );
   }
 }
