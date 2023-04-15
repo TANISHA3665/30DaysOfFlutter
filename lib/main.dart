@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         themeMode: ThemeMode.light,
         theme: ThemeData(
-          primarySwatch: Colors.cyan,
+          primarySwatch: Colors.teal,
           fontFamily: GoogleFonts.lato().fontFamily),
         darkTheme: ThemeData(
           brightness: Brightness.dark,
